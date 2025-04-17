@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuestra Historia de Amor 💌</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      background: url('papel-antiguo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #fff4e6;
+      color: #4b2e2e;
+      padding: 1rem;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px #fff0f0;
+    }
+
+    nav {
+      background-color: rgba(255, 248, 220, 0.9);
+      padding: 1rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      color: #6b1e1e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      border: 1px solid #d4a373;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #f7e1c9; /* Cambia el color de fondo a un tono más claro de rosa */
+        text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; /* Aplica un efecto de sombra roja alrededor del texto */
+    }
+
+    .contenido {
+      background-color: rgba(255, 248, 220, 0.9);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 228, 185, 0.8);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+
+    .contenido h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #6b1e1e;
+      text-shadow: 1px 1px 2px #f5d3b0;
+      margin-bottom: 2rem;
+    }
+
+    .contenido p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: #4b2e2e;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 30%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #6b1e1e;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* ❤️ Estilos para los corazones flotantes */
+    .corazon {
+      position: fixed;
+      animation: flotar 4s linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+      color: red;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerText = "❤";
+
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.top = "100vh";
+      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
+
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 4000);
+    }
+
+    setInterval(crearCorazon, 300);
+  </script>
+
+  <header>
+    <h1>La Historia de Nuestro Amor 💖</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="mensajes.html">Mensajes</a>
+    <a href="galeria.html">Galería</a>
+    <a href="juego.html">Juego</a>
+    <a href="carta.html">Carta de Amor</a>
+    <a href="musica.html">Nuestra Canción</a>
+  </nav>
+
+  <div class="contenido">
+    <div class="contenido">
+        <h2>El Comienzo de Todo</h2>
+        <p>
+          Todo comenzó un día cualquiera, uno de esos días en que la rutina parecía envolvernos, pero que en realidad estaba a punto de transformarse en algo único. Aquel día, nuestras vidas se cruzaron sin previo aviso, sin saber que todo lo que había ocurrido hasta ese momento nos había estado preparando para este encuentro. Un mensaje tímido, una conexión que creció de manera natural, como si el destino hubiera estado esperando este preciso momento para escribir nuestra historia.
+        </p>
+        <p>
+          Recuerdo el primer instante en que nuestras miradas se encontraron, como si el mundo entero se detuviera por un segundo, permitiéndonos sentir la conexión inmediata. Desde allí, todo cambió. La vida dejó de ser predecible y se volvió una aventura inesperada llena de nuevas emociones, sensaciones y promesas. Ya nada sería igual.
+        </p>
+    
+        <h2>El Nacimiento de un Vínculo</h2>
+        <p>
+          El primer mes fue un torbellino de emociones. Cada mensaje, cada encuentro parecía confirmar lo que, de alguna manera, ya sabíamos: algo grande estaba naciendo entre nosotros. Nos conocíamos, sí, pero cada día nos descubríamos aún más, explorando nuestras almas y abriendo puertas que hasta entonces permanecían cerradas. Las primeras risas compartidas, las primeras confesiones, los primeros miedos, todo nos fue uniendo cada vez más, creando un vínculo inquebrantable que con el tiempo se consolidó como una amistad profunda, que más tarde se transformaría en algo aún más hermoso: el amor.
+        </p>
+    
+        <h2>El Valor de los Pequeños Gestos</h2>
+        <p>
+          Una de las cosas más hermosas que descubrí en nuestra relación fue el poder de los pequeños gestos. Al principio, los detalles más simples parecían no tener mucha importancia, pero con el tiempo me di cuenta de lo que realmente significaban. Una caricia en un mal día, una sonrisa cuando más lo necesitaba, el "te amo" al final de una llamada. Esos gestos, que en la superficie pueden parecer simples, se convirtieron en el lenguaje de nuestro amor. Porque el amor no solo se encuentra en las grandes declaraciones, sino en esos momentos cotidianos que compartimos y que hacen de cada día algo especial.
+        </p>
+    
+        <h2>Nuestros Primeros Viajes</h2>
+        <p>
+          Uno de los momentos más memorables fue cuando decidimos viajar juntos por primera vez. No solo fue la emoción de descubrir un lugar nuevo, sino también la oportunidad de descubrir más el uno al otro. Entre los paisajes que recorrimos y los momentos compartidos en esos destinos, nuestra relación creció y se fortaleció. Recuerdo cómo, cada vez que llegábamos a un nuevo lugar, la emoción de estar allí juntos hacía que el mundo se desvaneciera por completo. Ya no importaba el destino, porque lo más importante era que estaba contigo. Aquellos viajes se convirtieron en los capítulos más hermosos de nuestra historia.
+        </p>
+    
+        <h2>Momentos Inolvidables: Risas, Lágrimas y Todo lo Intermedio</h2>
+        <p>
+          Pero no solo fueron los momentos felices los que marcaron nuestra historia. También vivimos desafíos, momentos de duda y lágrimas. Sin embargo, a través de cada dificultad, encontramos la manera de crecer juntos. Las dificultades nos enseñaron a confiar aún más el uno en el otro, a ser el refugio en medio de la tormenta. Nos demostramos que juntos podíamos superar cualquier obstáculo. Las risas y las lágrimas se entrelazaron, y en cada una de esas experiencias, el amor creció aún más fuerte.
+        </p>
+    
+        <h2>El Poder de la Complicidad</h2>
+        <p>
+          Con el tiempo, nuestra complicidad fue el pilar fundamental de nuestra relación. Ya no era solo una cuestión de amor, sino de entendernos sin palabras, de saber lo que el otro necesitaba sin que tuviera que pedirlo. Esa conexión profunda nos hizo sentir que nada podría separarnos. Los momentos de tranquilidad, sentados juntos sin hacer nada más que disfrutar de nuestra compañía, se convirtieron en algunos de los más preciosos. La complicidad no solo nos unió, sino que nos enseñó a caminar juntos en perfecta armonía, sin importar lo que la vida nos trajera.
+        </p>
+    
+        <h2>La Fuerza del Amor</h2>
+        <p>
+          A medida que avanzamos juntos, me di cuenta de que el amor no es solo un sentimiento pasajero, sino una fuerza poderosa que nos impulsa a seguir adelante. Nos da la fuerza para levantarnos en los días grises y para celebrar las pequeñas victorias cotidianas. El amor se construye en los momentos compartidos, en la forma en que nos apoyamos mutuamente, y en la manera en que nos miramos y entendemos incluso cuando no decimos una palabra.
+        </p>
+        <p>
+          Es la certeza de que, aunque la vida esté llena de desafíos, mientras estemos juntos, no habrá nada que no podamos superar.
+        </p>
+    
+        <h2>Un Futuro Juntos</h2>
+        <p>
+          Mirando hacia el futuro, me emociono al pensar en todo lo que aún nos queda por vivir. El camino no siempre será fácil, y los retos seguirán apareciendo, pero no tengo dudas de que, mientras estemos juntos, todo será posible. Cada día es una nueva oportunidad para escribir un nuevo capítulo en nuestra historia. Estoy emocionado por los sueños que aún tenemos por cumplir, por los momentos que aún nos esperan, y por la vida que vamos a construir juntos. 
+          Sé que el futuro estará lleno de sorpresas, pero lo que más me llena de emoción es que todo lo que venga lo enfrentaré a tu lado. El amor que compartimos sigue creciendo cada día, y eso es lo que me da fuerza para seguir soñando, para seguir creyendo, para seguir amándote con todo lo que soy.
+        </p><br><br>
+        <h2> Mi Promesa</h2>
+        <p> "Prometo amarte sin reservas, sin límites, sin importar las pruebas que la vida nos ponga en el camino. Te prometo que, aunque el tiempo pase y las circunstancias cambien, mi amor por ti será constante, inquebrantable y eterno. Cada día, me comprometo a ser la persona que te haga sentir amada, respetada y apoyada en cada paso que demos. En los días de luz y en los días de oscuridad, seré tu refugio, tu fuerza, tu compañero. Y cuando el futuro nos sorprenda, siempre recordaré este momento y todo lo que hemos construido juntos, porque tú eres mi razón, mi destino y mi hogar. No importa cuántos desafíos nos encontremos, juntos enfrentaremos todo, porque lo que siento por ti es un amor que trasciende el tiempo, que no conoce fronteras y que solo crecerá más con cada día que pase. Este viaje que estamos comenzando será el más hermoso de todos, y lo recorreré a tu lado, siempre."        </p>
+    </div>
+  <footer>
+    Hecho con todo mi amor para ti 💛 &copy; 2025
+  </footer>
+</body>
+</html>

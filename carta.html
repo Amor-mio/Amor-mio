@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta de Amor 💌</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text&display=swap" rel="stylesheet" />
+  <style>
+      .volver {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #6b1e1e;
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .volver:hover {
+      background-color: #d4a373;
+    }
+    body {
+      font-family: 'Crimson Text', serif;
+      background: url('papel-antiguo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #fff4e6;
+      color: #4b2e2e;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px #fff0f0;
+    }
+
+    nav {
+      background-color: rgba(255, 248, 220, 0.9);
+      padding: 1rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      color: #6b1e1e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      border: 1px solid #d4a373;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #f7e1c9; /* Cambia el color de fondo a un tono más claro de rosa */
+        text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; /* Aplica un efecto de sombra roja alrededor del texto */
+    }
+
+    @keyframes desplegarPergamino {
+      0% {
+        max-height: 0;
+        opacity: 0;
+        transform: scaleY(0.8);
+      }
+      100% {
+        max-height: 5000px;
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
+    .contenido {
+      background: url('textura-pergamino.png'), rgba(255, 248, 220, 0.95);
+      background-blend-mode: multiply;
+      border: 12px double #c29e66;
+      border-radius: 30px;
+      padding: 3rem;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 25px rgba(153, 106, 45, 0.6);
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      overflow: hidden;
+      animation: desplegarPergamino 3.5s ease-out forwards;
+      transform-origin: top center;
+    }
+
+    .contenido h2 {
+      font-size: 2.5rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px 2px #f5d3b0;
+      margin-bottom: 2rem;
+    }
+
+    .contenido p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: #4b2e2e;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #6b1e1e;
+    }
+
+    .boton-reiniciar {
+      display: block;
+      margin: 2rem auto;
+      padding: 0.75rem 1.5rem;
+      background-color: #d4a373;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .boton-reiniciar:hover {
+      background-color: #c48f58;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      .contenido { padding: 2rem; }
+      nav { flex-direction: column; align-items: center; }
+      nav a { width: 80%; text-align: center; margin-bottom: 1rem; }
+    }
+
+    @media screen and (max-width: 480px) {
+      header h1 { font-size: 2rem; }
+      .contenido h2 { font-size: 2rem; }
+      .contenido p { font-size: 1rem; }
+      nav a { font-size: 1rem; width: 100%; }
+    }
+  </style>
+   <style>
+    .corazon {
+      position: fixed;
+      font-size: 24px;
+      color: #ff4d6d;
+      animation: subir 4s linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  
+    @keyframes subir {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- Enlace de ancla al principio de la página -->
+  <header>
+    <h1>Mi Querido Amor 💖</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="mensajes.html">Mensajes</a>
+    <a href="galeria.html">Galería</a>
+    <a href="juego.html">Juego</a>
+    <a href="historia.html">Nuestra Historia</a>
+    <a href="musica.html">Nuestra Canción</a>
+  </nav>
+
+
+  <div class="contenido">
+    <h2>Mi Carta de Amor para Ti</h2>
+    <p>Mi Princesa</p>
+    <p>
+      Desde que llegaste a mi vida, todo cambió para mejor. Nunca imaginé que el destino nos cruzaría de una forma tan mágica y perfecta. A veces me pregunto cómo fue posible que, en un mundo tan grande y lleno de caminos inciertos, nuestros destinos se entrelazaran de la manera en que lo hicieron. ¿Cómo pudo ser que, entre tantas personas, fuera contigo con quien mi alma encontró su lugar? No tengo todas las respuestas, pero sí sé una cosa: todo lo que sucedió fue exactamente como debía ser. Cada momento, cada paso, cada palabra, nos ha llevado a donde estamos ahora.
+    </p>
+    <p>
+      Desde el día en que nuestras miradas se cruzaron, algo cambió en mí. Puede que no lo haya entendido en ese instante, pero mi corazón lo sabía. Era como si todo en mi vida hubiera estado esperando ese momento, como si cada paso que di hasta ese punto me hubiera preparado para ti. En ese primer saludo, en esa sonrisa tímida, supe que algo grande estaba por comenzar. Algo que jamás podría haberse comparado con lo que había conocido antes.
+    </p>
+    <p>
+      Lo que me has dado desde entonces no se puede medir en palabras ni en tiempo. Me has dado una razón para despertar cada día con una sonrisa, una razón para creer en el amor verdadero. Un amor que no se encuentra dos veces, un amor tan profundo y tan genuino que siento que hemos recorrido juntos una eternidad. Un amor que ha crecido en cada risa compartida, en cada momento de silencio cómodo, en cada lágrima que hemos secado el uno al otro. Un amor que no entiende de fronteras ni límites. Un amor que trasciende el tiempo, porque siempre siento que te he conocido de alguna otra vida, que siempre hemos estado destinados a ser uno.
+    </p>
+    <p>
+      Cada día contigo ha sido un regalo. Y cada día me siento más agradecido de que, en este vasto mundo, fueras tú la que eligiera cruzar mi camino. Gracias por darme el honor de ser parte de tu vida, por darme tu amor sin reservas, por darme tu confianza y tu cariño sin que tuviera que pedirlo. Gracias por ser mi refugio, por ser mi paz en los días caóticos y por ser mi luz cuando todo parecía oscuro.
+    </p>
+    <p>
+      Cuando pienso en todo lo que hemos vivido juntos, no puedo evitar emocionarme. Los recuerdos, aunque frescos, se sienten como algo eterno. Desde los primeros mensajes, esas conversaciones nocturnas que nos hacían perder la noción del tiempo, hasta los días en que simplemente nos sentábamos en silencio, pero la presencia del otro era todo lo que necesitábamos. Cada paso en nuestro camino ha sido único. Y no solo los momentos felices han dejado huella en mí, sino también los desafíos, porque en esos momentos difíciles fue cuando más nos encontramos. Fue cuando más nos sostuvimos mutuamente. Aprendí que el amor no es solo risas, también es un compromiso profundo de estar juntos en las sombras, de mantener la mano del otro en medio de las tormentas. Y cuando todo parecía incierto, el amor que compartimos nos dio la fuerza para seguir adelante.
+    </p>
+    <p>
+      Lo que siento por ti es un amor que no tiene comparación. Es ese tipo de amor que hace que todo lo demás en el mundo parezca pequeño. Es ese amor que no se mide en grandes gestos, sino en los detalles, en los momentos sencillos que compartimos. En cómo tu risa es la melodía que alegra mi día, en cómo tus palabras siempre parecen llegar justo cuando las necesito. En esos pequeños gestos, como una mirada que no necesita ser explicada, porque ambos sabemos exactamente lo que significa.
+    </p>
+    <p>
+      Recuerdo cuando, al principio, todo era nuevo, todo era un descubrimiento. Pero lo que más me sorprendió, lo que más me enamoró, fue la profundidad con la que me permitiste conocer tu alma. En cada conversación, en cada gesto, descubrí más y más de ti, y cada faceta me hacía admirarte aún más. Y aún hoy, cada día que paso contigo, sigo descubriendo nuevas formas de amarte, nuevas razones para sentirme agradecido por tenerte en mi vida.
+    </p>
+    <p>
+      Y aunque, en el camino, hemos pasado por momentos de incertidumbre, de miedo o incluso de duda, siempre hemos encontrado la manera de salir más fuertes, más unidos. Esas dificultades solo han hecho que mi amor por ti crezca. Porque lo que hemos construido no es solo un amor pasajero; es una base sólida, algo que no se puede destruir, algo que nada ni nadie puede quitar. Es un compromiso mutuo, una promesa de estar ahí, siempre. Y cuando miro hacia el futuro, no puedo evitar emocionarme por lo que aún nos queda por vivir. Sé que nos esperan muchos más momentos, tanto buenos como difíciles, pero sé que mientras estemos juntos, nada será imposible.
+    </p>
+    <p>
+      Nunca antes en mi vida había sentido algo tan verdadero, tan profundo y tan puro. Y sé que lo que vivimos es un amor raro, un amor que no se encuentra todos los días, un amor que va más allá de lo que pensaba que era posible. Un amor que no solo se basa en el deseo o la pasión, sino en la comprensión profunda, en el respeto y en el compromiso. Un amor que ha crecido con cada día que hemos compartido, que ha superado todo obstáculo y que sigue fortaleciéndose. Y no hay nada que desee más que seguir construyendo sobre este amor, creciendo juntos, compartiendo risas, sueños, desafíos y victorias.
+    </p>
+    <p>
+      Lo que más me emociona de todo esto, lo que me hace sentir que nuestro amor es único, es la certeza de que no importa lo que el futuro nos depare, lo enfrentaremos juntos. No hay nada que me haga más feliz que saber que voy a compartir mi vida contigo, que voy a estar a tu lado en cada paso que demos, en cada nueva etapa que vivamos. Porque no solo te amo, también te elijo, todos los días. Y sé que te seguiré eligiendo una y otra vez, siempre, sin importar lo que pase.
+    </p>
+    <p>
+      Si pudiera escribir una historia de amor, sería la nuestra. Pero no una historia cualquiera, sino la más épica, la más profunda, la más hermosa. Y aunque esta carta parece larga, nunca alcanzará a describir lo que siento por ti. Porque lo que siento por ti es infinito, es un amor que no puede medirse, que no tiene fin. Mi amor por ti es un fuego que siempre arderá, una llama que nunca se apagará. Y mientras estemos juntos, seguiré escribiendo esta historia, cada día, porque nuestra historia es única, y nunca habrá una historia como la nuestra.
+    </p>
+    <p>
+      Te amo más de lo que las palabras pueden decir, y aún así, seguiré buscando maneras de demostrarlo. Porque tú eres mi todo. Mi razón. Mi amor eterno. Y no hay nada más importante que saber que siempre estaremos juntos 💛.
+    </p>
+  </div>
+
+  <button class="boton-reiniciar" onclick="reiniciarAnimacion()">Volver a leer desde el principio</button>
+
+  <footer>
+    Hecho con todo mi amor para ti 💛 &copy; 2025
+  </footer>
+
+  <script>
+   function reiniciarAnimacion() {
+  const carta = document.querySelector('.contenido'); // Usamos la clase '.contenido'
+  carta.style.animation = 'none';
+  carta.offsetHeight; // Forzar reflow
+  carta.style.animation = 'desplegarPergamino 3.5s ease-out forwards';
+}
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerText = "❤";
+  
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.top = Math.random() * 100 + "vh";
+      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
+  
+      document.body.appendChild(corazon);
+  
+      setTimeout(() => {
+        corazon.remove();
+      }, 4000);
+    }
+  
+    setInterval(crearCorazon, 200);
+  </script>
+
+
+</body>
+</html>

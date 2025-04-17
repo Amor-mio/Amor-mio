@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestra Canción 💖</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text&display=swap" rel="stylesheet"> 
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      background: url('papel-antiguo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #fff4e6;
+      color: #4b2e2e;
+      padding: 1rem;
+      margin: 0;
+      animation: cambioFondo 10s ease infinite;
+    }
+
+    @keyframes cambioFondo {
+      0% { background-color: #fff4e6; }
+      50% { background-color: #fbe5d6; }
+      100% { background-color: #fff4e6; }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px #fff0f0;
+    }
+
+    nav {
+      background-color: rgba(255, 248, 220, 0.9);
+      padding: 1rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #6b1e1e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      border: 1px solid #d4a373;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f7e1c9;
+      text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d;
+    }
+
+    .contenido {
+      background-color: rgba(255, 248, 220, 0.9);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 228, 185, 0.8);
+      text-align: center;
+      position: relative;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+
+    .contenido h2 {
+      font-size: 2.5rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px 2px #f5d3b0;
+      margin-bottom: 1rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+
+    .info-cancion {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #6b1e1e;
+      margin-bottom: 0.5rem;
+    }
+
+    .frase-romantica {
+      font-style: italic;
+      color: #b85757;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      min-height: 1.5em;
+    }
+
+    .audio-bonito {
+      display: block;
+      margin: auto;
+      width: 90%;
+      max-width: 500px;
+      padding: 1rem;
+      border-radius: 20px;
+      background: #fffaf0;
+      border: 4px double #d4a373;
+      box-shadow: inset 0 0 10px rgba(255, 214, 170, 0.5),
+                  0 0 15px rgba(255, 228, 185, 0.9);
+      animation: latidoMusical 5s infinite ease-in-out;
+    }
+
+    @keyframes latidoMusical {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.02);
+        opacity: 1;
+      }
+    }
+
+    .boton-dedicar {
+      margin-top: 2rem;
+      background-color: #ffb3c1;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 192, 203, 0.5);
+    }
+
+    .boton-dedicar:hover {
+      background-color: #ff8fa3;
+      transform: scale(1.05);
+    }
+
+    .disco {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: url('disco.png') no-repeat center;
+      background-size: cover;
+      margin: 1.5rem auto;
+      animation: girarDisco 5s linear infinite;
+    }
+
+    @keyframes girarDisco {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .ondas {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .ondas div {
+      width: 5px;
+      height: 20px;
+      background: #ff4d6d;
+      animation: onda 1s infinite ease-in-out;
+    }
+
+    .ondas div:nth-child(2) { animation-delay: 0.1s; }
+    .ondas div:nth-child(3) { animation-delay: 0.2s; }
+    .ondas div:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes onda {
+      0%, 100% { height: 20px; }
+      50% { height: 40px; }
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #6b1e1e;
+    }
+
+    .corazon {
+      position: fixed;
+      font-size: 24px;
+      color: #ff4d6d;
+      animation: subir 4s linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @keyframes subir {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nuestra Canción 💖</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="mensajes.html">Mensajes</a>
+    <a href="galeria.html">Galería</a>
+    <a href="juego.html">Juego</a>
+    <a href="historia.html">Nuestra Historia</a>
+    <a href="carta.html">Carta de Amor</a>
+  </nav>
+
+  <div class="contenido">
+    <h2>La Canción Que Nos Define</h2>
+    <div class="info-cancion">🎵 Amor de Primavera</div>
+    <div class="disco" id="discoGiratorio">
+        <img src="Disco.png" width="10%">
+      </div>
+      
+    <div class="frase-romantica" id="fraseRomantica">"Eres la melodía que alegra mi alma..."</div>
+
+    <audio controls class="audio-bonito" id="miAudio">
+      <source src="Amor De Primavera.mp4" type="audio/mp3">
+    </audio>
+
+    <div class="ondas" id="ondasAnimadas">
+      <div></div><div></div><div></div><div></div>
+    </div>
+
+    <button class="boton-dedicar" id="botonDedicar">Dedicar esta canción</button>
+  </div>
+
+  <footer>
+    <p>💖 Este sitio está dedicado a la historia de nuestro amor.</p>
+  </footer>
+
+  <div class="corazon" id="corazonAnimado">💖</div>
+
+  <script>
+    const frases = [
+      "Eres la melodía que alegra mi alma...",
+      "Cada momento contigo es mi canción favorita.",
+      "Nuestro amor es mi ritmo eterno.",
+      "Cada latido de mi corazón sigue el compás de tu amor.",
+      "Mi vida tiene una banda sonora, y eres la canción principal."
+    ];
+
+    let indiceFrase = 0;
+    const fraseElement = document.getElementById('fraseRomantica');
+    const botonDedicar = document.getElementById('botonDedicar');
+
+    botonDedicar.addEventListener('click', () => {
+      // Cambiar la frase al azar
+      indiceFrase = (indiceFrase + 1) % frases.length;
+      fraseElement.textContent = frases[indiceFrase];
+    });
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerText = "❤";
+  
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.top = Math.random() * 100 + "vh";
+      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
+  
+      document.body.appendChild(corazon);
+  
+      setTimeout(() => {
+        corazon.remove();
+      }, 4000);
+    }
+  
+    setInterval(crearCorazon, 200);
+  </script>
+  </script>
+</body>
+</html>

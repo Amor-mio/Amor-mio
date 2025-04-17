@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Amor 💖</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Text&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Crimson Text', serif;
+      background: url('papel-antiguo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #fff4e6;
+      color: #4b2e2e;
+      padding: 1rem;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #6b1e1e;
+      text-shadow: 1px 1px #fff0f0;
+    }
+
+    nav {
+      background-color: rgba(255, 248, 220, 0.9);
+      padding: 1rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+    }
+
+    nav a {
+      color: #6b1e1e;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      border: 1px solid #d4a373;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+        background-color: #f7e1c9; /* Cambia el color de fondo a un tono más claro de rosa */
+        text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d; /* Aplica un efecto de sombra roja alrededor del texto */
+    }
+
+    .contenido {
+      background-color: rgba(255, 248, 220, 0.95);
+      border-radius: 20px;
+      padding: 2.5rem;
+      max-width: 950px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(255, 228, 185, 0.8);
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .contenido h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #6b1e1e;
+      text-shadow: 1px 1px 2px #f5d3b0;
+      margin-bottom: 1rem;
+    }
+
+    .pregunta {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .respuesta {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      background-color: #fffaf0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .respuesta:hover {
+      background-color: #f7e1c9;
+      transform: scale(1.05);
+    }
+
+    .feedback {
+      font-size: 1.3rem;
+      color: #6b1e1e;
+      margin-top: 1rem;
+      opacity: 0;
+      animation: fadeInFeedback 1s forwards;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #6b1e1e;
+    }
+
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInFeedback {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Juego de Amor 💖</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="mensajes.html">Mensajes</a>
+    <a href="galeria.html">Galería</a>
+    <a href="historia.html">Nuestra Historia</a>
+    <a href="carta.html">Carta de Amor</a>
+    <a href="musica.html">Nuestra Canción</a>
+  </nav>
+
+  <div class="contenido">
+    <h2>¿Cuánto conoces de nuestra historia?</h2>
+    <!-- Pregunta 1 -->
+    <div class="pregunta" id="pregunta1">
+      <p>¿Dónde nos conocimos?</p>
+      <div class="respuesta" onclick="verificarRespuesta(1, 'colegio', 'correcto')">En el colegio</div>
+      <div class="respuesta" onclick="verificarRespuesta(1, 'parque', 'incorrecto')">En un parque</div>
+      <div class="respuesta" onclick="verificarRespuesta(1, 'fiesta', 'incorrecto')">En una fiesta</div>
+      <div id="feedback1" class="feedback"></div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="pregunta" id="pregunta2" style="display: none;">
+      <p>¿Cuál fue nuestro primer viaje juntos?</p>
+      <div class="respuesta" onclick="verificarRespuesta(2, 'playa', 'incorrecto')">A la playa</div>
+      <div class="respuesta" onclick="verificarRespuesta(2, 'ricaurte', 'correcto')">A un pueblo</div>
+      <div class="respuesta" onclick="verificarRespuesta(2, 'ciudad', 'incorrecto')">A otra ciudad</div>
+      <div id="feedback2" class="feedback"></div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="pregunta" id="pregunta3" style="display: none;">
+      <p>¿Cuál es nuestra canción favorita?</p>
+      <div class="respuesta" onclick="verificarRespuesta(3, 'cancion', 'incorrecto')">Tengo ganas - Andres Cepeda</div>
+      <div class="respuesta" onclick="verificarRespuesta(3, 'cancion2', 'correcto')">Amor de primavera - Conjunto Chaney</div>
+      <div class="respuesta" onclick="verificarRespuesta(3, 'cancion3', 'incorrecto')">7 locas - Don Miguelo</div>
+      <div id="feedback3" class="feedback"></div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="pregunta" id="pregunta4" style="display: none;">
+      <p>¿Cuál fue el primer lugar donde nos besamos?</p>
+      <div class="respuesta" onclick="verificarRespuesta(4, 'parque', 'correcto')">En el parque</div>
+      <div class="respuesta" onclick="verificarRespuesta(4, 'cafe', 'incorrecto')">En un café</div>
+      <div class="respuesta" onclick="verificarRespuesta(4, 'casa', 'incorrecto')">En casa</div>
+      <div id="feedback4" class="feedback"></div>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="pregunta" id="pregunta5" style="display: none;">
+      <p>Si pudiéramos viajar juntos, ¿dónde iríamos?</p>
+      <div class="respuesta" onclick="verificarRespuesta(5, 'playa', 'correcto')">A la playa</div>
+      <div class="respuesta" onclick="verificarRespuesta(5, 'paris', 'incorrecto')">A un pueblo</div>
+      <div class="respuesta" onclick="verificarRespuesta(5, 'montana', 'incorrecto')">A la montaña</div>
+      <div id="feedback5" class="feedback"></div>
+    </div>
+
+    <div id="resultado" style="display: none; text-align: center;">
+      <h3 id="resultadoMensaje"></h3>
+      <button onclick="reiniciarJuego()">Volver a jugar</button>
+    </div>
+  </div>
+
+  <footer>
+    Hecho con todo mi amor para ti 💛 &copy; 2025
+  </footer>
+
+  <script>
+    let respuestasCorrectas = 0;
+    const totalPreguntas = 5; // Número total de preguntas (actualizado)
+
+    function verificarRespuesta(preguntaNumero, respuesta, estado) {
+      const feedbackElemento = document.getElementById('feedback' + preguntaNumero);
+      const elementos = document.querySelectorAll(`#pregunta${preguntaNumero} .respuesta`);
+      
+      // Ocultar las opciones de respuesta
+      elementos.forEach(element => element.style.display = 'none');
+
+      // Mostrar el feedback
+      if (estado === 'correcto') {
+        respuestasCorrectas++;
+        feedbackElemento.innerHTML = `¡Correcto! 💖`;
+        feedbackElemento.style.color = 'green';
+      } else {
+        feedbackElemento.innerHTML = `¡Ups! 😔`;
+        feedbackElemento.style.color = 'red';
+      }
+
+      feedbackElemento.style.opacity = 1;
+
+      // Ocultar la pregunta actual y mostrar la siguiente
+      setTimeout(() => {
+        document.getElementById(`pregunta${preguntaNumero}`).style.display = 'none';
+        const siguientePregunta = preguntaNumero + 1;
+        const siguientePreguntaId = `pregunta${siguientePregunta}`;
+        if (document.getElementById(siguientePreguntaId)) {
+          document.getElementById(siguientePreguntaId).style.display = 'block';
+        } else {
+          // Mostrar el resultado solo cuando todas las preguntas han sido respondidas
+          document.getElementById('resultado').style.display = 'block';
+          
+          // Asegurarnos de que el mensaje sea correcto
+          const resultadoMensaje = respuestasCorrectas === totalPreguntas ? "¡Lo lograste! Te amo mucho ❤️" : "¡Quizás la próxima vez! 😘";
+          document.getElementById('resultadoMensaje').innerHTML = resultadoMensaje;
+
+          // Resetear el contador de respuestas para que pueda ser usado en el reinicio
+          respuestasCorrectas = 0;
+        }
+      }, 1000); // Ajusta el tiempo de espera si es necesario
+    }
+
+    function reiniciarJuego() {
+      respuestasCorrectas = 0;
+      document.getElementById('resultado').style.display = 'none';
+
+      // Mostrar la primera pregunta
+      document.getElementById('pregunta1').style.display = 'block';
+
+      // Ocultar las retroalimentaciones
+      document.querySelectorAll('.feedback').forEach(feedback => feedback.style.opacity = 0);
+
+      // Mostrar las respuestas nuevamente
+      document.querySelectorAll('.respuesta').forEach(respuesta => {
+        respuesta.style.display = 'block'; // Mostrar las respuestas nuevamente
+      });
+
+      // Asegurarse de que todas las preguntas estén visibles
+      const preguntas = document.querySelectorAll('.pregunta');
+      preguntas.forEach(pregunta => pregunta.style.display = 'block');
+    }
+  </script>
+  <style>
+    .corazon {
+      position: fixed;
+      font-size: 24px;
+      color: #ff4d6d;
+      animation: subir 4s linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  
+    @keyframes subir {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+  
+  <script>
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.innerText = "❤";
+  
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.top = Math.random() * 100 + "vh";
+      corazon.style.fontSize = Math.random() * 20 + 20 + "px";
+  
+      document.body.appendChild(corazon);
+  
+      setTimeout(() => {
+        corazon.remove();
+      }, 4000);
+    }
+  
+    setInterval(crearCorazon, 200);
+  </script>
+  
+</body>
+</html>
